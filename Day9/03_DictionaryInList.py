@@ -16,7 +16,13 @@ travel_log = [
 
 
 def add_new_country(country, num_visits, cities):
-    travel_log.append({"country": country, "visits": num_visits, "cities": cities})
+    travel_log.append(
+        {
+            "country": country,
+            "visits": num_visits,
+            "cities": cities
+        }
+    )
 
 
 def add_new_country_contructor(country, num_visits, cities):
