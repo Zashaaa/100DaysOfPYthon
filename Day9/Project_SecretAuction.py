@@ -1,4 +1,4 @@
-from replit import clear
+# from replit import clear
 from art import logo
 
 print(logo)
@@ -24,8 +24,7 @@ while more_bidders:
     bids[name_bidder] = bid_amount
     other_bidder = input("Are there any other bidders? Type 'yes' or 'no'\n").lower()
     if other_bidder == "no":
-        clear()
+        # clear()
         more_bidders = False
         get_highest_bidder()
-    else:
-        clear()
+    # clear()
