@@ -8,6 +8,8 @@ shift = int(input("Type your shift number:\n"))
 
 
 def ceasar(text_input, shift_amount, desired_direction):
+    """Encode or decode a piece of text with Caesar Cipher
+    by a user determined shift amount """
     output = ""
     if desired_direction == "encode" or desired_direction == "decode":
         if shift_amount > 26:
@@ -30,5 +32,4 @@ def ceasar(text_input, shift_amount, desired_direction):
 
 
 ceasar(text, shift, direction)
-
 
