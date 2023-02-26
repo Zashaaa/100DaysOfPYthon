@@ -38,7 +38,7 @@ def calculator():
         num2 = float(input("What's the next number?: "))
         answer = operations[desired_operation](num1, num2)
         print(f"{num1} {desired_operation} {num2} = {answer}")
-        if input(f"Type 'y'to continue calculating with {answer}, or Type 'n' to start a new calculation: ") == "y":
+        if input(f"Type 'y' to continue calculating with {answer}, or Type 'n' to start a new calculation: ") == "y":
             num1 = answer
         else:
             continue_calculating = False
