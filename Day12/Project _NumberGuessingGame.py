@@ -24,7 +24,9 @@ while not right_input:
     else:
         print("Incorrect difficulty level , please try again....")
 
-print(f"You have {attempts} attempts remaining to guess the number.")
+
+def print_remaining_attempts():
+    print(f"You have {attempts} attempts remaining to guess the number.")
 
 
 def wrong_guess(number):
@@ -36,6 +38,7 @@ def wrong_guess(number):
 
 guessed = False
 while not guessed and attempts > 0:
+    print_remaining_attempts()
     guessed_number = int(input("Make a guess: "))
     if guessed_number == number_to_guess:
         print(f"You got it! The answer was {number_to_guess}.")
@@ -44,7 +47,6 @@ while not guessed and attempts > 0:
         attempts -= 1
         if attempts > 0:
             wrong_guess(guessed_number)
-            print(f"You have {attempts} attempts remaining to guess the number.")
         else:
             print(f"You've lost... The correct answer was {number_to_guess}.")
 
