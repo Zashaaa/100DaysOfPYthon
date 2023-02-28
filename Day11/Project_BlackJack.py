@@ -61,7 +61,7 @@ while not player_lost and not player_passed:
 dealer_score = get_score(dealer_cards)
 print(f"Dealer cards: {dealer_cards}, score: {dealer_score}")
 if not player_lost:
-    while dealer_score < player_score and dealer_score < 17:
+    while dealer_score < player_score and dealer_score <= 16:
         print("Dealer takes a card.")
         time.sleep(1)
         dealer_cards.append(deal_card())
