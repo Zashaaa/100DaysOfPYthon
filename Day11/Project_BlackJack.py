@@ -59,7 +59,7 @@ while not player_lost and not player_passed:
             player_passed = True
 
 dealer_score = get_score(dealer_cards)
-print(f"Dealer cards: {dealer_cards}, score: {dealer_score}")
+print(f"Dealer cards: {dealer_cards}, dealer score: {dealer_score}")
 if not player_lost:
     while dealer_score < player_score and dealer_score <= 16:
         print("Dealer takes a card.")
