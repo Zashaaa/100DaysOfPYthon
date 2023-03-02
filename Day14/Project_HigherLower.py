@@ -12,20 +12,15 @@ def get_item_to_compare(first_to_compare):
 
 
 def check_answer(a, b, guess):
-    if guess == 'a':
-        if a["follower_count"] > b["follower_count"]:
-            print("You are right!")
-            return True
-        else:
-            print("WRONG")
-            return False
+    if a > b and guess == "a":
+        print("You are right!")
+        return True
+    elif b > a and guess == "b":
+        print("You are right!")
+        return True
     else:
-        if b["follower_count"] > a["follower_count"]:
-            print("You are right!")
-            return True
-        else:
-            print("WRONG")
-            return False
+        print("WRONG")
+        return False
 
 
 def game():
@@ -42,7 +37,7 @@ def game():
         print(vs)
         print(f"Against B: {compare_b['name']}, a {compare_b['description']}, from {compare_b['country']}.")
         answer = input("Who has more followers? Type 'A' or 'B': ").lower()
-        correct = check_answer(compare_a, compare_b, answer)
+        correct = check_answer(compare_a["follower_count"], compare_b["follower_count"], answer)
         if correct:
             score += 1
     print(f"Game over! Your score is {score}")
